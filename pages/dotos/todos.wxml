@@ -1,0 +1,34 @@
+<view class="container">
+    <!-- 搜索功能 -->
+    <view class="search">
+        <!-- 点击添加的图片按钮 -->
+        <image src="../../images/tj.png" bindtap="addTodoHandle"></image>
+        <input type="text" placeholder="Anything here..."  value="{{search}}" bindinput="inputChangeHandle"/>
+    </view>
+    <!-- 工作区域 -->
+    <view class="todos">
+        <!-- 根据completed的属性来变化样式 注意在' completed'中添加'空格 -->
+        <view class="item{{item.completed ? ' completed' : '' }}" wx:for="{{todos}}">
+            <icon type="{{item.completed ? 'success' :'circle'}}"></icon>
+            <text>{{item.name}}</text>
+            <icon type="clear" size="16"></icon>
+        </view>
+        <!-- <view class="item">
+<icon type="success"></icon>
+<text>java</text>
+<icon type="clear" size="16"></icon>
+</view>
+
+<view class="item">
+<icon type="success"></icon>
+<text>html</text>
+<icon type="clear" size="16"></icon>
+</view> -->
+        <!-- 页脚区域 -->
+        <view class="footer">
+            <text>Toggle all</text>
+            <text>{{todos.length}} items left</text>
+            <text>Clear ompleted</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,57 @@
+/* pages/dotos/todos.wxss */
+.container {
+    border-top: 1rpx solid #e0e0e0;
+}
+.search{
+    display: flex;
+    border: 1rpx solid #e0e0e0;
+    margin: 20rpx;
+    border-radius: 5rpxx;
+    box-shadow: 0 0 50rpx #e0e0e0;
+    /* 设置内边距 */
+    padding: 20rpx;
+    /* 侧轴对齐   图片和文本文件对齐*/
+    align-items: center;
+}
+.search image{
+    width: 40rpx;
+    height: 40rpx;
+    margin: 2rpx;
+    align-content: center;
+    /* 图标离输入框离20rpx  也可以通过在input中margin-left:20rpx 来设置*/
+    margin-right: 20rpx;
+}
+.todos{
+    margin: 20rpx;
+    border-radius: 5rpxx;
+    box-shadow: 0 0 50rpx #e0e0e0;
+    /* 侧轴对齐   图片和文本文件对齐*/
+    align-items: center;
+}
+.todos .item {
+    align-content: center;
+    display: flex;
+    /* 内边距 */
+    padding: 20rpx;
+    border-bottom: 1px solid #e0e0e0;
+
+}
+.todos .item text{
+    margin-left: 25rpx;
+    flex: 1;
+    font-size: 35rpx;
+    
+}
+/* 根据类型修改样式的显示 */
+.todos .item.completed text{
+    color: #888;
+    text-decoration: line-through;
+    
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 20rpx;
+    font-size: 30rpx;
+
+}
